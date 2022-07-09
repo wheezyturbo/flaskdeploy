@@ -28,11 +28,9 @@ def hello_world():
     allTodo = Todo.query.all() 
     return render_template('index.html', allTodo=allTodo)
 
-@app.route('/show')
-def products():
-    allTodo = Todo.query.all()
-    print(allTodo)
-    return 'this is products page'
+@app.route('/about')
+def about():
+    return render_template('about.html')
 
 @app.route('/update/<int:sno>', methods=['GET', 'POST'])
 def update(sno):
