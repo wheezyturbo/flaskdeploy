@@ -6,7 +6,14 @@
     background: url('https://i.pinimg.com/originals/1e/72/e1/1e72e177da44eac61f206607a320d927.png');
     border-radius: 10px;
   }
+  #grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fill);
+  }
 </style>
+<script defer>
+
+</script>
     <div class="container my-3">
         <h2>Add a Todo</h2>
         <form action="/" method="POST">
@@ -31,7 +38,7 @@
                     No Todos found. Add your first todo now!
                   </div>
                     {% else %} 
-                    <table class="table">
+                    <table class="table" id = "myTable">
                         <thead>
                           <tr>
                             <th scope="col">SNo</th>
